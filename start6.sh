@@ -5,7 +5,7 @@ mkdir $HOME/tmp
 cd $HOME/tmp
 git clone https://github.com/abraxas678/start6.git
 cd $HOME/tmp/start6
-choose.sh "new machine" "existing machine" name="on whcih machine are you?"
+/bin/bash $HOME/tmp/start6/choose.sh "new machine" "existing machine" name="on whcih machine are you?"
 
 if [[ $output = *"new"* ]]; then
 read -p "this is a WSL? (y/n): >> " wsl
@@ -15,7 +15,7 @@ else
   echo change host name
 fi
 HOST_NAME=$1
-curl -fsSL https://tailscale.com/install.sh | sh
+[[ $(tailscale --version) != *"tailscale commit:"* ]] && curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up --ssh
 tailscale ip
 tailscale status
