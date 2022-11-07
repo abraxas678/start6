@@ -1,5 +1,11 @@
 #!/bin/bash
 echo; echo "NEW SERVER SETUP"; echo
+sudo apt install git
+cd $HOME
+git clone https://github.com/abraxas678/start6.git
+cd $HOME/start6
+
+choose.sh 
 read -p "WSL? (y/n): >> " wsl
 if [[ $wsl = "y" ]]; then
   echo change host name
