@@ -1,12 +1,14 @@
 #!/bin/bash
 echo; echo "NEW SERVER SETUP"; echo
 sudo apt install git
-cd $HOME
+mkdir $HOME/tmp
+cd $HOME/tmp
 git clone https://github.com/abraxas678/start6.git
-cd $HOME/start6
+cd $HOME/tmp/start6
+choose.sh "new machine" "existing machine" name="on whcih machine are you?"
 
-choose.sh 
-read -p "WSL? (y/n): >> " wsl
+if [[ $output = *"new"* ]]; then
+read -p "this is a WSL? (y/n): >> " wsl
 if [[ $wsl = "y" ]]; then
   echo change host name
 else
@@ -28,3 +30,16 @@ sudo apt-get install build-essential
 brew install gcc
 brew install pueue
 brew install ghq
+
+else
+echo
+cd /home/abraxas/ansible
+read -t 3 -p "update inventory" me
+nano inventory.yaml
+
+read -t 3 -p "update apt_install.yaml" me
+nano apt_install.yaml
+
+ansible-playbook -i inventory.yaml --ask-become-pass  apt_install.yaml
+
+fi

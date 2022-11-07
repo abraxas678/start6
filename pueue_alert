@@ -1,0 +1,2 @@
+Group "alert" (3 parallel): running
+Task list is empty. Add tasks with `pueue add -g alert -- [cmd]`
