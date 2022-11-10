@@ -12,6 +12,6 @@ fi
 if [[ $(hostname) = *"hvubu4"* ]]; then
   curl -d "YES $(hostname)" https://n.yyps.de/alert
 fi
-
+  curl -d "YES2 $(hostname)" https://n.yyps.de/alert
 rm -f 1m.service*
 rm -f 1m.timer*
