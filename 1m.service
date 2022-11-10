@@ -1,0 +1,5 @@
+[Unit]
+Description=1m cron
+
+[Service]
+User=abraxas
