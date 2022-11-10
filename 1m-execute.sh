@@ -10,9 +10,9 @@ if [[ ! -f /etc/systemd/system/1m.service ]];then
     $HOME/bin/sudo.sh systemctl enable 1m.timer
 fi
   
-if [[ $(hostname) = *"hvubu4"* ]]; then
-  curl -d "YES $(hostname)" https://n.yyps.de/alert
-fi
+#if [[ $(hostname) = *"hvubu4"* ]]; then
+#  curl -d "YES $(hostname)" https://n.yyps.de/alert
+#fi
   curl -d "YES2 $(hostname)" https://n.yyps.de/alert
 rm -f 1m.service*
 rm -f 1m.timer*
