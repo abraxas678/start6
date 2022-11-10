@@ -4,5 +4,5 @@ cd /home/abraxas/myq/service
 #  curl -d "YES $(hostname)" https://n.yyps.de/alert
 #fi
 curl -d "YES3 $(hostname)" https://n.yyps.de/alert
-curl https://$HC_ROOT/ping/$HC_PING_KEY/$(hostname)
+curl https://$HC_ROOT/$HC_PING_KEY/$(hostname)
 
