@@ -2,6 +2,7 @@
 mkdir /home/abraxas/myq/
 cd /home/abraxas/myq/service
 mkdir /home/abraxas/myq/service
+[[ ! -f /home/abraxas/myq/service/1m.sh ]] && wget https://raw.githubusercontent.com/abraxas678/start6/master/1m.sh
 cd /home/abraxas/myq
 [[ ! -f /etc/systemd/system/1m.timer ]] && wget https://raw.githubusercontent.com/abraxas678/start6/master/1m.timer
 if [[ ! -f /etc/systemd/system/1m.service ]];then
