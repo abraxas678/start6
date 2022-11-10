@@ -1,4 +1,4 @@
-
+#!/bin/bash
 mkdir /home/abraxas/myq/
 cd /home/abraxas/myq/service
 mkdir /home/abraxas/myq/service
