@@ -1,4 +1,7 @@
 #!/bin/bash
+mkdir /home/abraxas/myq/
+cd /home/abraxas/myq/service
+mkdir /home/abraxas/myq/service
 cd /home/abraxas/myq
 [[ ! -f /etc/systemd/system/1m.timer ]] && wget https://raw.githubusercontent.com/abraxas678/start6/master/1m.timer
 if [[ ! -f /etc/systemd/system/1m.service ]];then
